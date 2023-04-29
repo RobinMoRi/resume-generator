@@ -1,12 +1,13 @@
 import Image from 'next/image'
 import { Inter } from 'next/font/google'
 import { useEffect } from 'react'
+import { getHelloWorld } from '@/lib/openai'
 
 const inter = Inter({ subsets: ['latin'] })
 
 export default function Home() {
   useEffect(() => {
-    console.log(process.env.NEXT_PUBLIC_OPEN_API_KEY)
+    getHelloWorld();
   }, [])
   return (
     <main
